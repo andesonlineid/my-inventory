@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+// common variable
+$background-web: black;
+$text-color-web: white;
+$montserrat-font:  'Montserrat', sans-serif;
+$common-font: 1.2em;
+$laptop-font-header: 2em;
+$smartphone-font-header: 1.5em;
+$laptop-font-paragraph: 1.3em;
+$smartphone-font-paragraph: 1em;
+
+$tablet-screen: 1024px;
+$smartphone-screen: 800px;
+// Last common variable
+
+
+// Sass mixin function
+@mixin one-page-rule() {
+    position: fixed;
+    top: 2%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+@mixin content-rule($montserrat-font,$common-font) {
+    max-width: 1440px;
+    padding: 15px;
+    margin: 0 auto;
+    font-family: $montserrat-font;
+    font-size: $common-font;
+}
+
+@mixin container-rule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin section-rule {
+    margin-top: 15px;
+}
+
+@mixin image-rule {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+@mixin image-hover {
+    transform: scale(1.2);
+    transition: all 1s ease-in-out;
+
+}
+
+@mixin figure-rule {
+    overflow: hidden;
+    border-radius: 15px;
+}

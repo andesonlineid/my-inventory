@@ -1,0 +1,117 @@
+@import "style";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background-web;
+    color: $text-color-web;
+}
+
+// Syntacical Awesome Stylesheet (SASS) 
+// Nesting
+
+header {
+    @include content-rule($montserrat-font,$common-font);
+    @include container-rule();
+    @include one-page-rule();
+    flex-direction: column;
+
+    // Common
+    section {
+        @include section-rule();
+    }
+    // last common
+
+
+    .left-content {
+       
+        .video-introduction {
+            
+            figure {
+                @include figure-rule();
+                
+                img {
+                    @include image-rule();
+                    
+                    &:hover {
+                        @include image-hover();
+                    }
+                }
+            }
+        }
+
+        .description {
+            text-align: center;
+            
+            h1 {
+                margin-top: 15px;
+                font-size: $laptop-font-header;
+            }
+            
+            p {
+                margin-top: 10px;
+                font-size: $laptop-font-paragraph;
+            }
+        }
+
+    }
+
+
+    nav {
+        margin-top: 15px;
+
+        ul {
+            @include container-rule();
+
+            li {
+                    list-style-type: none;
+                    margin-right: 15px;
+                a {
+                        text-decoration: none;
+                        
+                        figure {
+                            @include figure-rule();
+                            
+                            img {
+                                @include image-rule();
+                                
+                                &:hover {
+                                    @include image-hover();
+                                }
+                            }
+                        }
+                }
+            }
+            
+        }
+    }
+
+  
+
+
+
+}
+
+
+/* Responsive breakpoints */
+
+@media screen and (max-width: $smartphone-screen) {
+
+    header {
+        .left-content {
+            .description {
+                h1 {
+                    font-size: $smartphone-font-header;
+                }
+                p {
+                    font-size: $smartphone-font-paragraph;
+                }
+            }
+        }
+    }
+   
+}
