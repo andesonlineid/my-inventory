@@ -1,31 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 // common variable
 $background-web: black;
 $text-color-web: white;
-$montserrat-font:  'Montserrat', sans-serif;
+$montserrat-font: 'Montserrat', sans-serif;
 $common-font: 1.2em;
+
+$btn-update-color: gold;
+$btn-delete-color: red;
+$btn-add-color: rgb(0, 149, 255);
+$btn-wealth-color: rgb(26, 170, 16);
+
 $laptop-font-header: 2em;
 $smartphone-font-header: 1.5em;
 $laptop-font-paragraph: 1.3em;
 $smartphone-font-paragraph: 1em;
-
 $tablet-screen: 1024px;
 $smartphone-screen: 800px;
 // Last common variable
 
 
 // Sass mixin function
+
+@mixin universal-rule {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 @mixin one-page-rule() {
     position: fixed;
     top: 2%;
     bottom: 0;
     left: 0;
     right: 0;
-
 }
 
-@mixin content-rule($montserrat-font,$common-font) {
+@mixin content-rule($montserrat-font, $common-font) {
     max-width: 1440px;
     padding: 15px;
     margin: 0 auto;
@@ -52,6 +63,17 @@ $smartphone-screen: 800px;
     transition: all 1s ease-in-out;
 }
 
+@mixin image-product {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+
 @mixin image-hover {
     transform: scale(1.2);
     transition: all 1s ease-in-out;
@@ -61,4 +83,27 @@ $smartphone-screen: 800px;
 @mixin figure-rule {
     overflow: hidden;
     border-radius: 15px;
+}
+
+
+@mixin btn-cta {
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: $common-font;
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin btn-cta-hover {
+    transition: all 0.5s ease-in-out;
+    border-radius: 20px;
+}
+
+@mixin input-rule {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: $common-font;
+
 }

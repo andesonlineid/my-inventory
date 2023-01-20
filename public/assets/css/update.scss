@@ -1,0 +1,60 @@
+@import "style";
+
+* {
+    @include universal-rule();
+}
+
+
+main {
+
+    #content {
+        @include content-rule($montserrat-font, $common-font);
+
+        .update-container {
+            @include container-rule();
+            flex-direction: column;
+
+            .left-content {
+                margin-bottom: 15px;
+
+                a {
+                    text-decoration: none;
+
+                    h1 {
+                        font-size: 3em;
+                    }
+                }
+            }
+
+            form {
+                text-align: center;
+
+                ul {
+
+                    li {
+
+                        list-style-type: none;
+                        margin-bottom: 15px;
+
+                        input {
+                            @include input-rule();
+                        }
+                    }
+                }
+
+                button {
+                    margin-top: 15px;
+                    @include btn-cta();
+                    background-color: $btn-update-color;
+                    color: black;
+
+                    &:hover {
+                        border-radius: 25px;
+                        @include btn-cta-hover();
+                        background-color: darken($btn-update-color, 10%);
+                    }
+                }
+            }
+        }
+    }
+}

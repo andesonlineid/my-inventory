@@ -1,0 +1,70 @@
+@import "style";
+
+* {
+    @include universal-rule();
+}
+
+#content {
+    @include content-rule($montserrat-font, $common-font);
+    @include one-page-rule();
+    top: 10%;
+
+    .signup-container {
+        @include container-rule();
+
+        .left-content {
+            flex-basis: 50%;
+        }
+
+        .right-content {
+            flex-basis: 50%;
+
+            ul {
+                li {
+                    list-style-type: none;
+                    margin-bottom: 15px;
+
+
+
+                    input {
+
+                        @include input-rule();
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+
+                    button {
+                        @include btn-cta();
+                        background-color: $btn-wealth-color;
+                        width: 100%;
+                        font-weight: 700;
+
+                        &:hover {
+                            @include btn-cta-hover();
+                            background-color: darken($btn-wealth-color, 10%);
+
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #content {
+        top: 20%;
+
+        .signup-container {
+            flex-direction: column;
+
+            .left-content {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

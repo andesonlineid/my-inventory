@@ -1,0 +1,98 @@
+@import "style";
+
+* {
+    @include universal-rule();
+}
+
+#content {
+    @include content-rule($montserrat-font, $common-font);
+    @include one-page-rule;
+    top: 10%;
+
+    .login-container {
+
+        @include container-rule();
+
+        .left-content {
+            flex-basis: 50%;
+        }
+
+        .right-content {
+            flex-basis: 50%;
+
+            form {
+                ul {
+                    li {
+                        list-style-type: none;
+
+                        input {
+                            margin-bottom: 20px;
+                        }
+
+                        .username-input {
+                            @include input-rule();
+                        }
+
+                        .password-input {
+                            @include input-rule();
+                        }
+                    }
+                }
+
+                button {
+                    @include btn-cta();
+                    background-color: $btn-add-color;
+                    width: 100%;
+
+                    &:hover {
+                        @include btn-cta-hover();
+                        background-color: darken($btn-add-color, 10%);
+                    }
+                }
+            }
+
+
+            .link-container {
+                @include container-rule();
+                flex-direction: column;
+
+                a {
+                    margin-top: 20px;
+                    text-decoration: none;
+
+                    .register-button {
+
+                        @include btn-cta();
+                        padding: 10px;
+                        background-color: greenyellow;
+                        color: black;
+
+                        &:hover {
+                            background-color: darken($color: greenyellow, $amount: 10%);
+                            @include btn-cta-hover();
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    #content {
+        top: 20%;
+
+        .login-container {
+            flex-direction: column;
+
+            .left-content {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+    }
+
+}

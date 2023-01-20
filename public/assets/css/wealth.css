@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main #content {
+  max-width: 1440px;
+  padding: 15px;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2em;
+}
+main #content .wealth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main #content .wealth-container .left-content {
+  text-align: center;
+  margin-bottom: 15px;
+}
+main #content .wealth-container .left-content a {
+  text-decoration: none;
+}
+main #content .wealth-container .left-content a h1 {
+  font-size: 3em;
+  cursor: pointer;
+}
+main #content .wealth-container table {
+  text-align: center;
+  border: 1px solid white;
+}
+main #content .wealth-container table thead {
+  padding: 15px;
+}
+main #content .wealth-container table thead th {
+  padding: 15px;
+}
+main #content .wealth-container table tr {
+  padding: 15px;
+}
+main #content .wealth-container table tr td {
+  padding: 15px;
+}/*# sourceMappingURL=wealth.css.map */

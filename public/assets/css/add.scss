@@ -1,0 +1,54 @@
+@import "style";
+
+* {
+    @include universal-rule();
+}
+
+#content {
+    @include content-rule($montserrat-font,$common-font);
+    @include one-page-rule();
+    .add-data-container {
+        @include container-rule();
+        flex-direction: column;
+
+        header {
+            a {
+                text-decoration: none;
+            }
+        }
+
+        form {
+            margin-top: 15px;
+            ul {
+                li {
+                    text-align: center;
+                    list-style-type: none;
+                    margin-bottom: 15px;
+                    input {
+                            @include input-rule();
+                    }
+                    button {
+                        text-align: center;
+                           @include btn-cta();
+                           background-color: $btn-add-color;
+                           &:hover {
+                            border-radius: 30px;
+                               @include btn-cta-hover();
+                               background-color: darken($btn-add-color,10%);
+                           }
+                    }
+                    
+                    }
+                }
+               
+        }
+    }
+}
+
+// Responsive breakpoints
+
+@media screen and (max-width: 1000px) {
+    #content {
+        top: 10%;
+    }
+}

@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#content {
+  max-width: 1440px;
+  padding: 15px;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2em;
+  position: fixed;
+  top: 2%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 10%;
+}
+#content .login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#content .login-container .left-content {
+  flex-basis: 50%;
+}
+#content .login-container .right-content {
+  flex-basis: 50%;
+}
+#content .login-container .right-content form ul li {
+  list-style-type: none;
+}
+#content .login-container .right-content form ul li input {
+  margin-bottom: 20px;
+}
+#content .login-container .right-content form ul li .username-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+#content .login-container .right-content form ul li .password-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+#content .login-container .right-content form button {
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 1.2em;
+  transition: all 0.5s ease-in-out;
+  background-color: rgb(0, 149, 255);
+  width: 100%;
+}
+#content .login-container .right-content form button:hover {
+  transition: all 0.5s ease-in-out;
+  border-radius: 20px;
+  background-color: #0077cc;
+}
+#content .login-container .right-content .link-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#content .login-container .right-content .link-container a {
+  margin-top: 20px;
+  text-decoration: none;
+}
+#content .login-container .right-content .link-container a .register-button {
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 1.2em;
+  transition: all 0.5s ease-in-out;
+  padding: 10px;
+  background-color: greenyellow;
+  color: black;
+}
+#content .login-container .right-content .link-container a .register-button:hover {
+  background-color: #98fb00;
+  transition: all 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  #content {
+    top: 20%;
+  }
+  #content .login-container {
+    flex-direction: column;
+  }
+  #content .login-container .left-content {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=login.css.map */
