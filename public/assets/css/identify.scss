@@ -1,0 +1,40 @@
+@import "style";
+
+
+* {
+    @include universal-rule();
+}
+
+main {
+    #content {
+        @include content-rule($montserrat-font, $common-font);
+        @include one-page-rule();
+
+        form {
+            text-align: center;
+
+            ul {
+                li {
+                    list-style-type: none;
+                    margin-bottom: 15px;
+
+                    input {
+                        @include input-rule();
+                        width: 50%;
+                    }
+
+                    button {
+                        @include btn-cta();
+                        background-color: green;
+                        width: 50%;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

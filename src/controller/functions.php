@@ -186,8 +186,6 @@ function loginFunct($userDatas)
 
 function searchProducts($data, $firstData, $dataPerPage)
 {
-
-
     $query = "SELECT * FROM products WHERE  name LIKE '%$data%'
     OR description LIKE '%$data%' ORDER BY id ASC LIMIT $firstData,$dataPerPage
     ";
@@ -195,6 +193,46 @@ function searchProducts($data, $firstData, $dataPerPage)
     return queryData($query);
 }
 
+
+
+function identifyEmail($userEmail)
+{
+    global $conn;
+    $emailUser = $userEmail["email-identify"];
+    $result = mysqli_query($conn, "SELECT * FROM users WHERE email = '$emailUser'");
+
+    if (mysqli_num_rows($result) > 0) {
+        session_start();
+        $_SESSION["email"] = $emailUser;
+        header("Location: ../model/passwordchanges.php");
+        exit;
+    }
+}
+
+function passwordChanges($dataPassword, $emailUser)
+{
+    global $conn;
+
+
+    $newPassword = htmlspecialchars(strtolower($dataPassword["new-password"]));
+    $newConfirmPassword = htmlspecialchars(strtolower($dataPassword["new-confirm-password"]));
+
+    if ($newPassword === $newConfirmPassword) {
+        $hashPassword = password_hash($newPassword, PASSWORD_BCRYPT);
+        mysqli_query($conn, "UPDATE users set password = '$hashPassword' WHERE email = '$emailUser'");
+
+        if (mysqli_affected_rows($conn) > 0) {
+            session_destroy();
+            echo
+            "
+            <script> alert('Update password successfully');
+            location.href = '../view/login.php';
+            </script>
+            ";
+        }
+    }
+    return false;
+}
 
 
 // Still wrong function and have to maintenance this

@@ -2,15 +2,17 @@
 
 * {
     @include universal-rule();
+    background-color: black;
 }
 
 #content {
     @include content-rule($montserrat-font, $common-font);
     @include one-page-rule;
+
     top: 10%;
 
     .login-container {
-
+        background-color: black;
         @include container-rule();
 
         .left-content {
