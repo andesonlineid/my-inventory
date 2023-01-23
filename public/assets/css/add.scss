@@ -4,9 +4,14 @@
     @include universal-rule();
 }
 
+body {
+    background-color: black;
+}
+
 #content {
-    @include content-rule($montserrat-font,$common-font);
+    @include content-rule($montserrat-font, $common-font);
     @include one-page-rule();
+
     .add-data-container {
         @include container-rule();
         flex-direction: column;
@@ -14,33 +19,43 @@
         header {
             a {
                 text-decoration: none;
+
+                h1 {
+                    font-size: 3em;
+                }
             }
         }
 
         form {
             margin-top: 15px;
+
             ul {
                 li {
                     text-align: center;
                     list-style-type: none;
                     margin-bottom: 15px;
+
                     input {
-                            @include input-rule();
+                        @include input-rule();
                     }
+
                     button {
+                        width: 100%;
                         text-align: center;
-                           @include btn-cta();
-                           background-color: $btn-add-color;
-                           &:hover {
+                        @include btn-cta();
+                        background-color: $btn-add-color;
+                        color: white;
+
+                        &:hover {
                             border-radius: 30px;
-                               @include btn-cta-hover();
-                               background-color: darken($btn-add-color,10%);
-                           }
+                            @include btn-cta-hover();
+                            background-color: darken($btn-add-color, 10%);
+                        }
                     }
-                    
-                    }
+
                 }
-               
+            }
+
         }
     }
 }

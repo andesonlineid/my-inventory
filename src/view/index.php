@@ -78,7 +78,6 @@ if (isset($_GET["pageClicked"])) {
 <body>
 
     <header>
-
         <section class="left-content">
             <h1>Welcome <?= $_SESSION["username"]; ?>
                 &#128151;
@@ -109,99 +108,98 @@ if (isset($_GET["pageClicked"])) {
 
 
             <?php if ($totalData == 0) : ?>
-            <section class="product-container">
-                <p style="text-align: center;">Data could not found !!!</p>
-            </section>
+                <section class="product-container">
+                    <p style="text-align: center;">Data could not found !!!</p>
+                </section>
 
 
             <?php else : ?>
-            <?php $i = 1; ?>
-            <?php foreach ($products as $product) : ?>
-            <section class="product-container">
-                <section class="left-content">
-                    <figure>
-                        <img src="../../public/assets/img/<?= $product['image']; ?>" alt="<?= $product['image']; ?>"
-                            title="<?= $product['image'] ?>">
-                    </figure>
-                </section>
+                <?php $i = 1; ?>
+                <?php foreach ($products as $product) : ?>
+                    <section class="product-container">
+                        <section class="left-content">
+                            <figure>
+                                <img src="../../public/assets/img/<?= $product['image']; ?>" alt="<?= $product['image']; ?>" title="<?= $product['image'] ?>">
+                            </figure>
+                        </section>
 
-                <section class="right-content">
-                    <section class="list-product">
-                        <ul>
-                            <li>
-                                <p>No: <?= $i + $firstData++ ?> </p>
-                            </li>
-                            <li>
-                                <p>Name: <?= $product["name"]; ?> </p>
-                            </li>
-                            <li>
-                                <p>Price: <?= $product["price"]; ?> </p>
-                            </li>
-                            <li>
-                                <p>Quantity: <?= $product["quantity"]; ?> </p>
-                            </li>
+                        <section class="right-content">
+                            <section class="list-product">
+                                <ul>
+                                    <li>
+                                        <p>No: <?= $i + $firstData++ ?> </p>
+                                    </li>
+                                    <li>
+                                        <p>Name: <?= $product["name"]; ?> </p>
+                                    </li>
+                                    <li>
+                                        <p>Price: <?= $product["price"]; ?> </p>
+                                    </li>
+                                    <li>
+                                        <p>Quantity: <?= $product["quantity"]; ?> </p>
+                                    </li>
 
-                            <li>
-                                <p>Description: <?= $product["description"] ?> </p>
-                            </li>
-                        </ul>
+                                    <li>
+                                        <p>Description: <?= $product["description"] ?> </p>
+                                    </li>
+                                </ul>
 
-                        <section class="btn-cta-container">
+                                <section class="btn-cta-container">
 
-                            <a href="../model/update.php?ID=<?= $product['id']; ?>">
-                                <button type="submit" class="btn-cta btn-update">
-                                    update
-                                </button>
-                                <a href="../model/delete.php?ID=<?= $product['id']; ?>">
-                                    <button type="submit" class="btn-cta btn-delete">
-                                        delete
-                                    </button>
-                                </a>
-                            </a>
+                                    <a href="../model/update.php?ID=<?= $product['id']; ?>">
+                                        <button type="submit" class="btn-cta btn-update">
+                                            update
+                                        </button>
+                                        <a href="../model/delete.php?ID=<?= $product['id']; ?>">
+                                            <button type="submit" class="btn-cta btn-delete">
+                                                delete
+                                            </button>
+                                        </a>
+                                    </a>
+
+                                </section>
+                            </section>
 
                         </section>
+
                     </section>
 
-                </section>
-
-            </section>
-
-            <?php endforeach; ?>
+                <?php endforeach; ?>
 
             <?php endif; ?>
 
             <div class="pagination-container">
 
                 <?php if ($pageClicked != 1) : ?>
-                <a href="?pageClicked=<?= $pageClicked - 1 ?>">
-                    < </a>
+                    <a href="?pageClicked=<?= $pageClicked - 1 ?>">
+                        < </a>
                         <?php endif; ?>
 
 
                         <section class="center-content">
                             <?php for ($i = 1; $i <= $page; $i++) : ?>
 
-                            <?php if ($i == $pageClicked) : ?>
-                            <a href="?pageClicked=<?= $i ?>">
-                                <p style="color:blue"> <?= $i  ?>
-                                </p>
-                            </a>
-                            <?php else : ?>
+                                <?php if ($i == $pageClicked) : ?>
+                                    <a href="?pageClicked=<?= $i ?>">
+                                        <p style="color:white; font-weight:bolder;"> <?= $i  ?>
+                                        </p>
+                                    </a>
+                                <?php else : ?>
 
-                            <a href="?pageClicked=<?= $i ?>">
-                                <p> <?= $i  ?>
-                                </p>
-                            </a>
+                                    <a href="?pageClicked=<?= $i ?>">
+                                        <p> <?= $i  ?>
+                                        </p>
+                                    </a>
 
-                            <?php endif; ?>
+                                <?php endif; ?>
 
                             <?php endfor; ?>
                         </section>
 
                         <?php if ($pageClicked <  $page) : ?>
-                        <a href="?pageClicked=<?= $pageClicked + 1 ?>">
-                            >
-                        </a>
+                            <a href="?pageClicked=<?= $pageClicked + 1 ?>">
+                                >
+                            </a>
                         <?php endif; ?>
 
             </div>

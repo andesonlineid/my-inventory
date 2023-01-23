@@ -2,17 +2,20 @@
 
 * {
     @include universal-rule();
+}
+
+body {
     background-color: black;
 }
 
 #content {
     @include content-rule($montserrat-font, $common-font);
     @include one-page-rule;
+    top: 15%;
+    color: white;
 
-    top: 10%;
 
     .login-container {
-        background-color: black;
         @include container-rule();
 
         .left-content {
@@ -25,10 +28,11 @@
             form {
                 ul {
                     li {
+                        margin-bottom: 20px;
                         list-style-type: none;
 
-                        input {
-                            margin-bottom: 20px;
+                        h1 {
+                            text-align: center;
                         }
 
                         .username-input {
@@ -42,13 +46,16 @@
                 }
 
                 button {
-                    @include btn-cta();
                     background-color: $btn-add-color;
                     width: 100%;
+                    color: white;
+                    @include btn-cta();
 
                     &:hover {
-                        @include btn-cta-hover();
                         background-color: darken($btn-add-color, 10%);
+
+                        @include btn-cta-hover();
+
                     }
                 }
             }
@@ -58,19 +65,21 @@
                 @include container-rule();
                 flex-direction: column;
 
+
                 a {
                     margin-top: 20px;
                     text-decoration: none;
+                    color: white;
 
                     .register-button {
 
                         @include btn-cta();
                         padding: 10px;
-                        background-color: greenyellow;
+                        background-color: rgb(0, 255, 132);
                         color: black;
 
                         &:hover {
-                            background-color: darken($color: greenyellow, $amount: 10%);
+                            background-color: darken($color: rgb(0, 255, 132), $amount: 10%);
                             @include btn-cta-hover();
                         }
                     }
@@ -85,7 +94,7 @@
 @media screen and (max-width: 1024px) {
 
     #content {
-        top: 20%;
+        top: 25%;
 
         .login-container {
             flex-direction: column;

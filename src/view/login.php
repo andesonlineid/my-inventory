@@ -54,20 +54,21 @@ if (isset($_POST["btn-login"])) {
 
             <div class="login-container">
                 <section class="left-content">
-                    <h1>Desainer Gratis</h1>
-                    <p>Streamer | Web Developer</p>
+                    <h1>Budz Talent</h1>
+                    <p>Song Writer | Singer | Web Developer</p>
                 </section>
 
                 <section class="right-content">
                     <form action="" method="POST">
                         <ul>
                             <li>
-                                <input class="username-input" type="text" autocomplete="off" name="username"
-                                    placeholder="Email address or username" required>
+                                <h1>Log in form</h1>
                             </li>
                             <li>
-                                <input name="password" class="password-input" autocomplete="off" type="password"
-                                    placeholder="Password" required>
+                                <input class="username-input" type="text" autocomplete="off" name="username" placeholder="Your  username" required>
+                            </li>
+                            <li>
+                                <input name="password" class="password-input" autocomplete="off" type="password" placeholder="Password" required>
                             </li>
                             <li>
                                 <input type="checkbox" id="remember" name="remember"> <label for="remember">remember
@@ -81,7 +82,7 @@ if (isset($_POST["btn-login"])) {
                     <section class="link-container">
 
                         <a href="identify.php">
-                            Forgotten password ?
+                            Forgotten password ?!
                         </a>
                         <a href="signup.php">
                             <button type="submit" class="register-button">

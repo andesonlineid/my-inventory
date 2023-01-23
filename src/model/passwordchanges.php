@@ -40,7 +40,7 @@ if (isset($_POST["btn-changes-password"])) {
                 <ul>
                     <li>
                         <a href="../view/login.php">
-                            home
+                            <h1> 🏡</h1>
                         </a>
                     </li>
                     <li>

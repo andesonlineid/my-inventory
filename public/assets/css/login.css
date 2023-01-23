@@ -3,6 +3,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
   background-color: black;
 }
 
@@ -17,10 +20,10 @@
   bottom: 0;
   left: 0;
   right: 0;
-  top: 10%;
+  top: 15%;
+  color: white;
 }
 #content .login-container {
-  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,10 +35,11 @@
   flex-basis: 50%;
 }
 #content .login-container .right-content form ul li {
+  margin-bottom: 20px;
   list-style-type: none;
 }
-#content .login-container .right-content form ul li input {
-  margin-bottom: 20px;
+#content .login-container .right-content form ul li h1 {
+  text-align: center;
 }
 #content .login-container .right-content form ul li .username-input {
   width: 100%;
@@ -50,19 +54,20 @@
   font-size: 1.2em;
 }
 #content .login-container .right-content form button {
+  background-color: rgb(24, 159, 255);
+  width: 100%;
+  color: white;
   border-radius: 5px;
   border: none;
   cursor: pointer;
   padding: 8px;
   font-size: 1.2em;
   transition: all 0.5s ease-in-out;
-  background-color: rgb(0, 149, 255);
-  width: 100%;
 }
 #content .login-container .right-content form button:hover {
+  background-color: #0085e4;
   transition: all 0.5s ease-in-out;
   border-radius: 20px;
-  background-color: #0077cc;
 }
 #content .login-container .right-content .link-container {
   display: flex;
@@ -73,6 +78,7 @@
 #content .login-container .right-content .link-container a {
   margin-top: 20px;
   text-decoration: none;
+  color: white;
 }
 #content .login-container .right-content .link-container a .register-button {
   border-radius: 5px;
@@ -82,18 +88,18 @@
   font-size: 1.2em;
   transition: all 0.5s ease-in-out;
   padding: 10px;
-  background-color: greenyellow;
+  background-color: rgb(0, 255, 132);
   color: black;
 }
 #content .login-container .right-content .link-container a .register-button:hover {
-  background-color: #98fb00;
+  background-color: #00cc6a;
   transition: all 0.5s ease-in-out;
   border-radius: 20px;
 }
 
 @media screen and (max-width: 1024px) {
   #content {
-    top: 20%;
+    top: 25%;
   }
   #content .login-container {
     flex-direction: column;

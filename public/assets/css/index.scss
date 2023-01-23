@@ -2,11 +2,13 @@
 
 * {
     @include universal-rule();
-
 }
 
 body {
     font-family: $montserrat-font;
+    background-color: black;
+    color: white;
+
 }
 
 header {
@@ -14,9 +16,6 @@ header {
     align-items: center;
     padding: 15px;
     justify-content: space-between;
-
-
-    .left-content {}
 
     nav {
         ul {
@@ -28,17 +27,18 @@ header {
 
 
                     p {
-                        color: black;
+                        color: white;
                         padding: 10px;
-                        background-color: white;
+                        background-color: $btn-delete-color;
                         border-radius: 5px;
+                        font-weight: bold;
                         transition: all 1s ease-in-out;
 
                         &:hover {
                             font-weight: bolder;
                             border-radius: 30px;
                             @include btn-cta-hover();
-                            background-color: darken($color: white, $amount: 10%);
+                            background-color: darken($color: $btn-delete-color, $amount: 10%);
                         }
                     }
                 }
@@ -52,18 +52,25 @@ header {
     @include container-rule();
     flex-direction: column;
 
+
     form {
         display: flex;
         align-items: center;
 
         input {
             @include input-rule();
+
         }
 
         button {
             margin-left: 5px;
             @include btn-cta();
             background-color: $btn-wealth-color();
+            color: white;
+
+            &:hover {
+                @include btn-cta-hover();
+            }
         }
     }
 
@@ -192,6 +199,8 @@ header {
                 margin-right: 15px;
                 @include btn-cta();
                 background-color: $btn-add-color;
+                color: white;
+
 
                 &:hover {
                     @include btn-cta-hover();
@@ -203,6 +212,7 @@ header {
 
                 @include btn-cta();
                 background-color: $btn-wealth-color;
+                color: white;
 
                 &:hover {
                     @include btn-cta-hover();

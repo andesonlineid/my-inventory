@@ -3,12 +3,19 @@
 
 * {
     @include universal-rule();
+
+}
+
+body {
+    background-color: black;
 }
 
 main {
     #content {
         @include content-rule($montserrat-font, $common-font);
         @include one-page-rule();
+        color: white;
+
 
         form {
             text-align: center;
@@ -16,23 +23,25 @@ main {
             ul {
                 li {
                     list-style-type: none;
-                    margin-bottom: 15px;
+                    margin-bottom: 29px;
 
                     input {
+                        color: black;
                         @include input-rule();
                         width: 50%;
                     }
 
                     button {
                         @include btn-cta();
-                        background-color: green;
-                        width: 50%;
+                        background-color: $btn-add-color;
+                        color: white;
+
+                        &:hover {
+                            @include btn-cta-hover();
+                            background-color: darken($btn-add-color, 10%);
+                        }
                     }
 
-                    a {
-                        text-decoration: none;
-                        color: white;
-                    }
                 }
             }
         }

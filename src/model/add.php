@@ -41,7 +41,7 @@ if (isset($_POST["btn-add"])) {
 
                 <header>
                     <a href="../view/index.php">
-                        <h1>🏡</h1>
+                        <h1>🔙</h1>
                     </a>
                 </header>
                 <form action="" method="POST" enctype="multipart/form-data">
@@ -50,12 +50,10 @@ if (isset($_POST["btn-add"])) {
                             <input type="text" name="product-name" placeholder="input product name" required>
                         </li>
                         <li>
-                            <input type="number" name="product-price" placeholder="input product price" min="0"
-                                required>
+                            <input type="number" name="product-price" placeholder="input product price" min="0" required>
                         </li>
                         <li>
-                            <input type="number" name="product-qty" placeholder="input product quantity" min="0"
-                                required>
+                            <input type="number" name="product-qty" placeholder="input product quantity" min="0" required>
                         </li>
                         <li>
                             <input type="file" name="product-image" placeholder="input product image">

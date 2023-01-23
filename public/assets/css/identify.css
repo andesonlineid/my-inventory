@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: black;
+}
+
 main #content {
   max-width: 1440px;
   padding: 15px;
@@ -16,15 +20,17 @@ main #content {
   bottom: 0;
   left: 0;
   right: 0;
+  color: white;
 }
 main #content form {
   text-align: center;
 }
 main #content form ul li {
   list-style-type: none;
-  margin-bottom: 15px;
+  margin-bottom: 29px;
 }
 main #content form ul li input {
+  color: black;
   width: 100%;
   padding: 8px;
   border-radius: 5px;
@@ -38,10 +44,11 @@ main #content form ul li button {
   padding: 8px;
   font-size: 1.2em;
   transition: all 0.5s ease-in-out;
-  background-color: green;
-  width: 50%;
-}
-main #content form ul li a {
-  text-decoration: none;
+  background-color: rgb(24, 159, 255);
   color: white;
+}
+main #content form ul li button:hover {
+  transition: all 0.5s ease-in-out;
+  border-radius: 20px;
+  background-color: #0085e4;
 }/*# sourceMappingURL=identify.css.map */

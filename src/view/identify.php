@@ -31,20 +31,20 @@ if (isset($_POST["btn-check-email"])) {
 
             <form action="" method="post">
                 <ul>
-
-
-                    <li><label for="">Input your email address</label></li>
                     <li>
-                        <input type="text" name="email-identify" placeholder="Email address">
+                        <a href="login.php">
+                            <h1>🔙</h1>
+                        </a>
+                    </li>
+
+                    <li><label for="email"> Your email address</label></li>
+                    <li>
+                        <input type="text" id="email" name="email-identify" placeholder="Email address">
                     </li>
                     <li>
                         <button type="submit" name="btn-check-email">check email</button>
                     </li>
-                    <li>
-                        <a href="login.php">
-                            back
-                        </a>
-                    </li>
+
                 </ul>
 
             </form>

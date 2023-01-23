@@ -57,7 +57,7 @@ if (isset($_POST["btn-update"])) {
                 <section class="left-content">
                     <a href="../view/index.php">
                         <h1>
-                            🏠
+                            🔙
                         </h1>
                     </a>
                 </section>
@@ -66,32 +66,29 @@ if (isset($_POST["btn-update"])) {
                     <ul>
 
                         <li>
-                            <input type="hidden" name="id" value="<?= $datasOld["id"]; ?>"
-                                placeholder=" input update product name">
+                            <input type="hidden" name="id" value="<?= $datasOld["id"]; ?>" placeholder=" input update product name">
                         </li>
                         <li>
-                            <input type="hidden" name="old-image" value="<?= $datasOld["image"]; ?>"
-                                placeholder=" input update product name">
+                            <input type="hidden" name="old-image" value="<?= $datasOld["image"]; ?>" placeholder=" input update product name">
                         </li>
 
                         <li>
-                            <input type="text" name="product-name" value="<?= $datasOld["name"]; ?>"
-                                placeholder=" input update product name">
+                            <input type="text" name="product-name" value="<?= $datasOld["name"]; ?>" placeholder=" input update product name">
                         </li>
                         <li>
-                            <input type="number" name="product-price" min="0" value="<?= $datasOld["price"]; ?>"
-                                placeholder=" input update product price">
+                            <input type="number" name="product-price" min="0" value="<?= $datasOld["price"]; ?>" placeholder=" input update product price">
                         </li>
                         <li>
-                            <input type="number" name="product-qty" min="0" value="<?= $datasOld["quantity"]; ?>"
-                                placeholder=" input update product quantity">
+                            <input type="number" name="product-qty" min="0" value="<?= $datasOld["quantity"]; ?>" placeholder=" input update product quantity">
+                        </li>
+                        <li>
+                            <img src="../../public/assets/img/<?= $datasOld["image"]; ?>" alt="<?= $datasOld["image"]; ?>" title="<?= $dataOld["image"]; ?>">
                         </li>
                         <li>
                             <input type="file" name="product-image">
                         </li>
                         <li>
-                            <input type="text" name="product-desc" value="<?= $datasOld["description"]; ?>"
-                                placeholder=" input update product description">
+                            <input type="text" name="product-desc" value="<?= $datasOld["description"]; ?>" placeholder=" input update product description">
                         </li>
 
 
